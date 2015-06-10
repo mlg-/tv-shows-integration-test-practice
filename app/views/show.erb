@@ -1,0 +1,20 @@
+<h1><%= show.title %></h1>
+
+<dl>
+  <dt>Network:</dt>
+  <dd><%= show.network %></dd>
+  <dt>Years:</dt>
+  <dd><%= show.starting_year %> -
+    <% if show.ending_year.nil? %>
+      (still running)
+    <% else %>
+      <%= show.ending_year %></dd>
+    <% end %>
+  <dt>Genre:</dt>
+  <dd><%= show.genre %></dd>
+</dl>
+
+<p><%= show.synopsis %></p>
+
+<a href="/television_shows/<%= show.id %>/edit">Edit this show</a><br/>
+<a href="/television_shows">Back to all shows</a>
